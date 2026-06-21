@@ -59,45 +59,6 @@ ${message}
         })
       }} />
 
-      {/* HERO */}
-      <section className="contact-hero">
-
-        <div className="contact-hero-copy">
-
-          <span className="eyebrow">
-            CONTACT ROOBOTEC
-          </span>
-
-          <h1>
-            LET’S BUILD SOMETHING <br />
-            <span className="blue-text">AMAZING TOGETHER</span>
-          </h1>
-
-          <p>
-            Whether you need AI solutions, software development,
-            automation, or digital products our team is ready
-            to help bring your ideas to life.
-          </p>
-
-        </div>
-
-        <div className="contact-hero-card">
-
-          <div className="hero-card">
-
-            <h2>Get In Touch</h2>
-
-            <p>
-              We’re always open to discussing new projects,
-              creative ideas, and innovative business solutions.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
       {/* FORM SECTION */}
       <section className="contact-form-section">
 

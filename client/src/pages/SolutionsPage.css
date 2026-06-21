@@ -17,13 +17,13 @@
 
 .solutions-hero .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 4rem;
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 3rem;
+  padding: 0 1.5rem;
   /* preserve original horizontal padding inside centered container */
 }
 
@@ -126,7 +126,8 @@
 
 /* HERO IMAGE */
 .hero-right img {
-  width: 110%;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   opacity: 0;
@@ -217,7 +218,7 @@
 .solutions-grid {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -280,7 +281,7 @@
 .why-grid {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
 }
 
@@ -317,6 +318,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .cta-section h2 {

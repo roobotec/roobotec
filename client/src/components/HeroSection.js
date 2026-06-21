@@ -1,8 +1,56 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
+const stats = [
+  { value: 50, suffix: '+', label: 'Projects Delivered' },
+  { value: 100, suffix: '%', label: 'Client Satisfaction' },
+  { value: 10, suffix: '+', label: 'Industries Served' },
+  { value: 24, suffix: '/7', label: 'Support Available' },
+];
+
 const HeroSection = () => {
+  const [counts, setCounts] = useState(stats.map(() => 0));
+  const statsRef = useRef(null);
+  const animationStarted = useRef(false);
+
+  useEffect(() => {
+    const animateCounts = () => {
+      const duration = 1200;
+      const startTime = performance.now();
+
+      const step = (timestamp) => {
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        setCounts(stats.map((stat) => Math.ceil(stat.value * progress)));
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !animationStarted.current) {
+            animationStarted.current = true;
+            animateCounts();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -23,23 +71,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hero-stats">
-        <div className="stat-item">
-          <div className="stat-icon">50+</div>
-          <p className="stat-label">Projects Delivered</p>
-        </div>
-        <div className="stat-item">
-          <div className="stat-icon">100%</div>
-          <p className="stat-label">Client Satisfaction</p>
-        </div>
-        <div className="stat-item">
-          <div className="stat-icon">10+</div>
-          <p className="stat-label">Industries Served</p>
-        </div>
-        <div className="stat-item">
-          <div className="stat-icon">24/7</div>
-          <p className="stat-label">Support Available</p>
-        </div>
+      <div className="hero-stats" ref={statsRef}>
+        {stats.map((stat, index) => (
+          <div className="stat-item" key={stat.label}>
+            <div className="stat-icon">{counts[index]}{stat.suffix}</div>
+            <p className="stat-label">{stat.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

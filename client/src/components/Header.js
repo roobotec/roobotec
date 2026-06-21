@@ -18,11 +18,10 @@ const Header = () => {
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <NavLink onClick={closeMenu} to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
           <NavLink onClick={closeMenu} to="/services" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Services</NavLink>
-          <NavLink onClick={closeMenu} to="/solutions" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Solutions</NavLink>
+          {/* <NavLink onClick={closeMenu} to="/solutions" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Solutions</NavLink> */}
           <NavLink onClick={closeMenu} to="/about" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>About Us</NavLink>
+          <NavLink onClick={closeMenu} to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contact Us</NavLink>
         </nav>
-
-        <Link onClick={closeMenu} to="/contact" className="contact-btn">Contact Us</Link>
 
         <div
           className={`hamburger ${isMenuOpen ? 'active' : ''}`}

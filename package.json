@@ -10,7 +10,7 @@
     "server": "cd server && npm start",
     "build": "cd client && npm run build"
   },
-  "keywords": [
+  "keywords": [        
     "MERN",
     "React",
     "Node",

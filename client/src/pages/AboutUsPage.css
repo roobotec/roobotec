@@ -10,15 +10,15 @@
 .about-hero {
   max-width: 1320px;
   margin: auto;
-  padding: 80px 40px 40px;
+  padding: 80px 20px 40px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
   gap: 40px;
 }
 
 .about-hero-copy {
-  margin-left: -60px;
+  margin-left: 0;
 }
 
 .eyebrow {

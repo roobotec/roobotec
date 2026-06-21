@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
 
@@ -7,27 +7,26 @@ const Services = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch services from backend or use default data
     const defaultServices = [
       {
         id: 1,
         title: 'AI Automation',
-        description: 'Increase Efficiency',
-        percentage: '+78%',
-        details: 'Streamline your business processes with intelligent automation'
+        description: 'Automate your repetitive business tasks using intelligent AI systems. Save time, reduce errors, and improve productivity with smart workflow automation designed for modern businesses.',
+
+        details: 'Work smarter, not harder.'
       },
       {
         id: 2,
         title: 'Data Analysis',
         description: 'Better Decisions',
-        percentage: '+85%',
+        
         details: 'Transform raw data into actionable insights'
       },
       {
         id: 3,
         title: 'AI Products',
-        description: 'Smarter Solutions',
-        details: 'Custom AI-powered products for your business'
+        description: 'Develop intelligent AI-powered products tailored to your business needs, helping you innovate faster and deliver exceptional customer experiences.',
+        details: 'Innovation powered by AI.'
       },
       {
         id: 4,
@@ -38,14 +37,39 @@ const Services = () => {
       {
         id: 5,
         title: 'Management Systems',
-        description: 'Streamline Operations',
-        details: 'Enterprise-grade management solutions'
+        description: 'Simplify and centralize your operations with modern management systems that improve collaboration, efficiency, and overall productivity.',
+        details: 'Enterprise grade management solutions'
       }
     ];
 
     setServices(defaultServices);
     setLoading(false);
   }, []);
+
+  const [flipped, setFlipped] = useState({});
+  const [isTouch, setIsTouch] = useState(false);
+  const mounted = useRef(false);
+
+  useEffect(() => {
+    mounted.current = true;
+    const touch =
+      window.matchMedia &&
+      window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+    setIsTouch(touch || ('ontouchstart' in window));
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
+
+  const toggleFlip = (idx) => {
+    setFlipped((prev) => ({ ...prev, [idx]: !prev[idx] }));
+  };
+
+  const titleToFilename = (title) => {
+    const base = title.replace(/\s+/g, '_');
+    return '/' + base + '.jpeg';
+  };
 
   return (
     <section id="services" className="services">
@@ -58,16 +82,65 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <Link key={index} to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className={`service-card card-${index + 1}`}>
-                <div className="service-header">
-                  <h3>{service.title}</h3>
+            <Link
+              key={index}
+              to="/services"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+              onClick={(e) => {
+                if (isTouch && !flipped[index]) {
+                  e.preventDefault();
+                  toggleFlip(index);
+                }
+              }}
+            >
+              <div
+                className={`service-card flip-card ${flipped[index] ? 'is-flipped' : ''
+                  }`}
+                onMouseLeave={() => {
+                  if (!isTouch && flipped[index]) toggleFlip(index);
+                }}
+              >
+                <div className="flip-inner">
+                  {/* FRONT */}
+                  <div className="flip-front">
+                    <div className="front-title">
+                      <h3>{service.title}</h3>
+                    </div>
+
+                    <img
+                      src={titleToFilename(service.title)}
+                      alt={service.title}
+                      className="service-image"
+                      onError={(e) => {
+                        const src = e.target.src;
+                        if (src.endsWith('.jpeg'))
+                          e.target.src = src.replace('.jpeg', '.jpg');
+                        else if (src.endsWith('.jpg'))
+                          e.target.src = src.replace('.jpg', '.png');
+                        else e.target.src = '/logo.png';
+                      }}
+                    />
+                  </div>
+
+                  {/* BACK */}
+                  <div className="flip-back">
+                    <h3>{service.title}</h3>
+
+                    <p className="service-subtitle">
+                      {service.description}
+                    </p>
+
+                    {service.percentage && (
+                      <div className="service-percentage">
+                        {service.percentage}
+                      </div>
+                    )}
+
+                    <p className="service-details">
+                      {service.details}
+                    </p>
+                  </div>
                 </div>
-                <p className="service-subtitle">{service.description}</p>
-                {service.percentage && (
-                  <div className="service-percentage">{service.percentage}</div>
-                )}
-                <p className="service-details">{service.details}</p>
               </div>
             </Link>
           ))}
