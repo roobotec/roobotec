@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/roobotec/static/css/main.36437c67.css",
-    "main.js": "/roobotec/static/js/main.53e09fae.js",
-    "index.html": "/roobotec/index.html",
-    "main.36437c67.css.map": "/roobotec/static/css/main.36437c67.css.map",
-    "main.53e09fae.js.map": "/roobotec/static/js/main.53e09fae.js.map"
+    "main.css": "/static/css/main.36437c67.css",
+    "main.js": "/static/js/main.55754315.js",
+    "index.html": "/index.html",
+    "main.36437c67.css.map": "/static/css/main.36437c67.css.map",
+    "main.55754315.js.map": "/static/js/main.55754315.js.map"
   },
   "entrypoints": [
     "static/css/main.36437c67.css",
-    "static/js/main.53e09fae.js"
+    "static/js/main.55754315.js"
   ]
 }
