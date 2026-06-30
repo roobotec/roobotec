@@ -19,7 +19,7 @@ const Services = () => {
         id: 2,
         title: 'Data Analysis',
         description: 'Better Decisions',
-        
+
         details: 'Transform raw data into actionable insights'
       },
       {
@@ -68,7 +68,17 @@ const Services = () => {
 
   const titleToFilename = (title) => {
     const base = title.replace(/\s+/g, '_');
-    return '/' + base + '.jpeg';
+    return `${process.env.PUBLIC_URL}/${base}.jpeg`;
+  };
+
+  const getFallbackImageSrc = (src) => {
+    if (src.endsWith('.jpeg')) {
+      return src.replace('.jpeg', '.jpg');
+    }
+    if (src.endsWith('.jpg')) {
+      return src.replace('.jpg', '.png');
+    }
+    return `${process.env.PUBLIC_URL}/logo.png`;
   };
 
   return (
@@ -112,12 +122,7 @@ const Services = () => {
                       alt={service.title}
                       className="service-image"
                       onError={(e) => {
-                        const src = e.target.src;
-                        if (src.endsWith('.jpeg'))
-                          e.target.src = src.replace('.jpeg', '.jpg');
-                        else if (src.endsWith('.jpg'))
-                          e.target.src = src.replace('.jpg', '.png');
-                        else e.target.src = '/logo.png';
+                        e.target.src = getFallbackImageSrc(e.target.src);
                       }}
                     />
                   </div>
