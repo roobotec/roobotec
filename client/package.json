@@ -6,8 +6,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.0",
-    "react-icons": "^4.8.0"
+    "robotec-website": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.24.8",
     "gh-pages": "^6.0.1",
     "react-scripts": "5.0.1"
   }
