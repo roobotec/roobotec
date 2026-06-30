@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="ROBOTEC Logo" className="logo-img" />
+            <img src={`${process.env.PUBLIC_URL}/logo.png?v=20260630`} alt="ROBOTEC Logo" className="logo-img" />
           </Link>
         </div>
 
