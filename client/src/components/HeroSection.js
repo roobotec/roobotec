@@ -67,7 +67,7 @@ const HeroSection = () => {
         </div>
 
         <div className="hero-image">
-          <img src="/home-page-img.png" alt="ROOBOTEC illustrative AI robot" className="robot-img" loading="lazy" />
+          <img src={`${process.env.PUBLIC_URL}/home-page-img.png`} alt="ROOBOTEC illustrative AI robot" className="robot-img" loading="lazy" />
         </div>
       </div>
 

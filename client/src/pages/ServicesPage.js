@@ -110,7 +110,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="hero-image">
-            <img src="/solution_img.png" alt="ROOBOTEC services overview illustration" loading="lazy" />
+            <img src={`${process.env.PUBLIC_URL}/Solution_img.png`} alt="ROOBOTEC services overview illustration" loading="lazy" />
           </div>
         </div>
       </section>
@@ -143,13 +143,13 @@ export default function ServicesPage() {
                 <div className="service-card-face service-card-front">
                   <div className="service-image-container">
                     <img
-                      src={`/servises/${serviceIconFiles[service.title] ?? `${service.title.replace(/\s+/g, '_')}.png`}`}
+                      src={`${process.env.PUBLIC_URL}/servises/${serviceIconFiles[service.title] ?? `${service.title.replace(/\s+/g, '_')}.png`}`}
                       alt={service.title}
                       className="service-image"
                       loading="lazy"
                       decoding="async"
                       onError={(e) => {
-                        const basePath = `/servises/${serviceIconFiles[service.title] ?? `${service.title.replace(/\s+/g, '_')}`}`;
+                        const basePath = `${process.env.PUBLIC_URL}/servises/${serviceIconFiles[service.title] ?? `${service.title.replace(/\s+/g, '_')}`}`;
                         const src = e.target.src;
 
                         if (src.endsWith('.png')) {

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="/ShortLogo.png" alt="ROBOTEC" />
+              <img src={`${process.env.PUBLIC_URL}/ShortLogo.png`} alt="ROBOTEC" />
             </div>
             <p>Building innovative AI and technology solutions for the future.</p>
           </div>
@@ -50,13 +50,13 @@ const Footer = () => {
             <p>Thoker naiz baig Lahore, Pakistan</p>
             <div className="footer-socials">
               <a href="https://www.instagram.com/roobotec.ltd/" target="_blank" rel="noopener noreferrer">
-                <img src="/instagram.png" alt="Instagram" />
+                <img src={`${process.env.PUBLIC_URL}/instagram.png`} alt="Instagram" />
               </a>
               <a href="https://www.facebook.com/profile.php?id=61589565616732" target="_blank" rel="noopener noreferrer">
-                <img src="/facebook.png" alt="Facebook" />
+                <img src={`${process.env.PUBLIC_URL}/facebook.png`} alt="Facebook" />
               </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img src="/linkedin.png" alt="LinkedIn" />
+                <img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="LinkedIn" />
               </a>
             </div>
           </div>
