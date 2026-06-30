@@ -1,21 +1,17 @@
 {
   "name": "robotec-website",
   "version": "1.0.0",
-  "description": "ROBOTEC Company Website - MERN Stack",
+  "description": "ROBOTEC Company Website - React Frontend",
   "main": "index.js",
   "scripts": {
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "install-client": "cd client && npm install",
     "client": "cd client && npm start",
-    "server": "cd server && npm start",
     "build": "cd client && npm run build"
   },
-  "keywords": [        
-    "MERN",
+  "keywords": [
     "React",
-    "Node",
-    "Express",
-    "MongoDB"
+    "Frontend",
+    "GitHub Pages"
   ],
   "author": "",
   "license": "ISC",

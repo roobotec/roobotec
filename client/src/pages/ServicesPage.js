@@ -10,47 +10,47 @@ const servicesMeta = {
 const services = [
   {
     title: "AI Solutions",
-    desc: "We design and implement intelligent AI solutions that help businesses automate workflows, improve decision-making, and increase operational efficiency. From predictive analytics and recommendation systems to custom AI-powered applications, our solutions are tailored to meet your unique business requirements. We leverage cutting-edge technologies to help organizations innovate, reduce costs, and stay competitive in an ever-evolving digital landscape.",
+    desc: "We design and deliver AI solutions that automate workflows, enhance decision-making, and improve efficiency. From predictive analytics to custom AI applications, our services are tailored to your business needs, helping you innovate, reduce costs, and stay competitive using advanced technologies.",
     icon: "🤖",
   },
   {
     title: "AI Automation",
-    desc: "Transform your business with intelligent automation that eliminates repetitive tasks and optimizes workflows. We develop AI-powered automation systems that integrate seamlessly with your existing processes, improving productivity, reducing human error, and saving valuable time. Whether it's document processing, customer support, workflow automation, or data management, our solutions enable your team to focus on strategic and high-value activities.",
+    desc: "We build AI automation systems that streamline workflows, reduce repetitive tasks, and improve productivity. Our solutions integrate with your processes to save time, reduce errors, and support efficient operations like support, data, and document handling.",
     icon: "⚙️",
   },
   {
     title: "Data Science",
-    desc: "Turn your data into a strategic asset with our comprehensive data science services. We collect, analyze, and visualize data to uncover actionable insights that support smarter business decisions. Using advanced machine learning algorithms, predictive analytics, and statistical modeling, we help businesses identify trends, forecast outcomes, optimize operations, and create data-driven strategies that fuel sustainable growth.",
+    desc: "We turn data into actionable insights using data science, machine learning, and analytics. Our services help businesses uncover trends, predict outcomes, optimize operations, and make smarter data-driven decisions for sustainable growth",
     icon: "📊",
   },
   {
     title: "Web Development",
-    desc: "We create modern, responsive, and high-performance websites that deliver exceptional user experiences across all devices. From corporate websites and custom web applications to enterprise portals, our solutions combine attractive design with secure, scalable architecture. Our development approach focuses on speed, accessibility, SEO optimization, and seamless functionality to help your business establish a strong online presence.",
+    desc: "We build modern, responsive, and high-performance websites that deliver great user experiences on all devices. From corporate sites to custom web apps, our solutions are secure, scalable, SEO-friendly, and optimized for speed and functionality to strengthen your online presence.",
     icon: "🌐",
   },
   {
     title: "App Development",
-    desc: "Build powerful mobile applications that engage users and drive business growth. Our app development services cover Android, iOS, and cross-platform solutions designed with intuitive interfaces and robust performance. Whether you need a customer-facing application or an enterprise mobile solution, we ensure seamless functionality, secure architecture, and an outstanding user experience from concept to deployment.",
+    desc: "We build powerful mobile apps for Android, iOS, and cross-platform use that engage users and support business growth. Our solutions focus on intuitive design, strong performance, security, and seamless functionality from concept to deployment.",
     icon: "📱",
   },
   {
     title: "Custom Software",
-    desc: "Every business is unique, and your software should be too. We develop fully customized software solutions tailored to your workflows, goals, and operational needs. Our scalable applications streamline business processes, improve collaboration, and enhance productivity. From CRM systems and ERP platforms to internal management tools, we deliver reliable software that grows alongside your business.",
+    desc: "We build custom software tailored to your business needs, workflows, and goals. Our scalable solutions improve efficiency, collaboration, and productivity, including CRM, ERP, and management systems that grow with your business.",
     icon: "💻",
   },
   {
     title: "E-Commerce Solutions",
-    desc: "Launch and grow your online business with secure, scalable, and feature-rich e-commerce solutions. We build customized online stores with responsive designs, secure payment gateways, inventory management, order tracking, and customer-friendly shopping experiences. Whether you're starting a new online business or upgrading an existing platform, we help maximize conversions and drive long-term revenue growth.",
+    desc: "We build secure, scalable e-commerce stores with responsive design, payment integration, inventory, and order management. Our solutions improve user experience, boost conversions, and support long-term business growth.",
     icon: "🛒",
   },
   {
     title: "Marketing",
-    desc: "Expand your brand's reach with data-driven digital marketing strategies tailored to your business goals. Our services include SEO, social media marketing, PPC advertising, content marketing, email campaigns, and analytics. By combining creativity with performance tracking, we help attract qualified leads, improve customer engagement, increase website traffic, and maximize your return on investment.",
+    desc: "We provide data driven digital marketing services including SEO, social media, PPC, content, email campaigns, and analytics. Our strategies increase visibility, attract quality leads, boost engagement, and maximize ROI.",
     icon: "📣",
   },
   {
     title: "Graphic Designing",
-    desc: "Create a lasting impression with visually compelling graphic design solutions that strengthen your brand identity. We design logos, marketing materials, social media creatives, brochures, banners, presentations, UI/UX elements, and more. Our creative team combines aesthetics with strategic thinking to produce designs that communicate your message effectively and leave a memorable impact on your audience.",
+    desc: "We create impactful graphic design solutions that strengthen your brand identity. Our services include logos, marketing materials, social media posts, banners, brochures, presentations, and UI/UX designs that communicate your message clearly and leave a strong visual impression.",
     icon: "🎨",
   },
 ];
