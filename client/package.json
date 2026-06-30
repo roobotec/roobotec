@@ -2,7 +2,7 @@
   "name": "robotec-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roobotec.github.io/roobotec",
+  "homepage": "https://roobotec.com",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
