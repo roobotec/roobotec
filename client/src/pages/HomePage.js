@@ -20,21 +20,24 @@ const HomePage = () => {
       document.head.appendChild(desc);
     }
     desc.setAttribute('content', homeMeta.description);
-    // canonical
+
+    const siteUrl = `${window.location.origin}/roobotec/`;
+
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', window.location.origin + '/');
+    canonical.setAttribute('href', siteUrl);
   }, []);
 
+  const siteUrl = `${window.location.origin}/roobotec/`;
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'ROOBOTEC',
-    url: window.location.origin + '/',
+    url: siteUrl,
     description: homeMeta.description,
   };
 
