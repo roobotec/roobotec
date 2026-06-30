@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/roobotec/static/css/main.36437c67.css",
+    "main.js": "/roobotec/static/js/main.53e09fae.js",
+    "index.html": "/roobotec/index.html",
+    "main.36437c67.css.map": "/roobotec/static/css/main.36437c67.css.map",
+    "main.53e09fae.js.map": "/roobotec/static/js/main.53e09fae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36437c67.css",
+    "static/js/main.53e09fae.js"
+  ]
+}
