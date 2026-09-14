@@ -47,7 +47,8 @@ const Footer = () => {
             <h4>Contact</h4>
             {/* <p>+92 (333) 778-8410</p> */}
             <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.roobotec@gmail.com" target="_blank" rel="noopener noreferrer">info.roobotec@gmail.com</a></p>
-            <p>Thoker naiz baig Lahore, Pakistan</p>
+            <p>16th Floor, Tricon Corporate Center,Gulberg, Lahore, Pakistan
+</p>
             <div className="footer-socials">
               <a href="https://www.instagram.com/roobotec.ltd/" target="_blank" rel="noopener noreferrer">
                 <img src={`${process.env.PUBLIC_URL}/instagram.png?v=20260630`} alt="Instagram" />

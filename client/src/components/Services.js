@@ -4,7 +4,6 @@ import './Services.css';
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const defaultServices = [
@@ -43,7 +42,6 @@ const Services = () => {
     ];
 
     setServices(defaultServices);
-    setLoading(false);
   }, []);
 
   const [flipped, setFlipped] = useState({});

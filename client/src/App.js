@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import ScrollToTop from './ScrollToTop';
 import HomePage from './pages/HomePage';
@@ -8,6 +8,7 @@ import SolutionsPage from './pages/SolutionsPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import Footer from './components/Footer';
+import ChatbotWidget from './components/ChatbotWidget';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<ContactUsPage />} />
       </Routes>
       <Footer />
+      <ChatbotWidget />
     </Router>
   );
 }
